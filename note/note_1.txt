@@ -1,0 +1,19 @@
+mysql 新增使用者
+1. 使用root權限登入mysql
+    mysql -u root -p
+    use mysql;
+2. 新增使用者帳號密碼
+    create user 'account'@'%' identified by 'password';
+3. 設定讀取權限
+    __ => name of database
+    grant select on __.* to 'account'@'%'
+4. 拔除權限
+    revoke select on __.* from 'account'@'%'
+5. 刪除帳號
+    __ => account
+    drop user __
+6. 查看權限
+    show grants for 'account'@'%'
+7. 設定寫入權限
+    database, table
+    grant insert on __.__ to 'account'@'%'

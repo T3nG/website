@@ -1,0 +1,1 @@
+<html><head><meta charset="UTF-8"><title>Access Denied</title><script>location.replace("../index.php")</script></head><body><h1>Access Denied</h1></body></html>
