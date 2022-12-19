@@ -84,45 +84,6 @@ function checkData(form){
     document.inputForm.submit();
 }
 
-function populateInputs(){
-    document.getElementById("memName").setAttribute("value", "<?php echo $memName; ?>");
-    document.getElementById("address").setAttribute("value", "<?php echo $memAddress; ?>");
-    document.getElementById("id_number").setAttribute('value', "<?php echo $memIdNumber; ?>");
-    if("<?php echo $memSex; ?>"=="M"){
-        document.getElementById("M").checked = true;
-    }
-    else{
-        document.getElementById("F").checked = true;
-    }
-    var select_y = document.getElementById('year');
-    var option_y;
-    for (var i=0; i<select_y.options.length; i++) {
-        option_y = select_y.options[i];
-        if (option_y.value == "<?php echo $memBirthYear; ?>") {
-            option_y.selected = true;
-            return;
-        }
-    }
-    var select_m = document.getElementById('month');
-    var option_m;
-    for (var i=0; i<select_m.options.length; i++) {
-        option_m = select_m.options[i];
-        if (option_m.value == "<?php echo $memBirthMonth; ?>") {
-            option_m.selected = true;
-            return;
-        }
-    }
-    var select_d = document.getElementById('day');
-    var option_d;
-    for (var i=0; i<select_d.options.length; i++) {
-        option_d = select_d.options[i];
-        if (option_d.value == "<?php echo $memBirthDay; ?>") {
-            option_d.selected = true;
-            return;
-        }
-    }
-}
-
 window.onload=function(){
     createYearOptions();
 }
