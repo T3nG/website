@@ -20,7 +20,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
     else{
         $conn->close();
-        echo "<script>alert('註冊失敗! 該帳號已有人使用'); location.href='register_process.php'; </script>";
+        require_once "config.php";
+        $_SESSION["username"] = $username;
+        echo "<script>alert('註冊失敗! 該帳號已有人使用'); location.href='../register.php'; </script>";
         exit;
     }
 }
